@@ -15,8 +15,21 @@
         <p>Phone: (931) 308-1919</p>
         <p>Address: 932 Franklin Heights Drive, Winchester, TN 37398</p>
         <p>Assignment: Clement Hall</p>
+        <div class="formgroup">
+            <label for="txtPayRate">Pay Rate</label>
+            <input id="txtPayRate">
+        </div>
+        <div class="formgroup" id="divHours">
+            <label for="txtHours">Hours Worked</label>
+            <input id="txtHours">
+        </div>
         <input id="txtPayRate">
         <input id="txtHours">
+        <select id="cboEmployeeType">
+            <option></option>
+            <option value="FULL">Full Time</option>
+            <option value="PART">Part Time</option>
+        </select>
         <button type="button" id="btnTest" class="btn btn-warning mb-3">Calculate</button>
     </div>
     <script src="js/lib/jquery-3.6.0.min.js"></script>
