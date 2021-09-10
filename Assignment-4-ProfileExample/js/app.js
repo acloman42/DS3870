@@ -7,7 +7,7 @@ $('#btnTest').click(function() {
 $('#cboEmployeeType').change(function() {
     if($('#cboEmployeeType').val() == 'FULL'){
         $('#divHours').slideUp();
-        // $('#divHours').css('display','none');
+        // $('#divHours').css('display','none'); <DOES NOT SLIDE>
     }else {
         $('#divHours').slideDown();
     }
