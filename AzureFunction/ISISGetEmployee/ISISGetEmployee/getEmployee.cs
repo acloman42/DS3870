@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using System.Data.SqlClient;
 
 namespace ISISGetEmployee
 {
@@ -52,6 +53,8 @@ namespace ISISGetEmployee
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
+            string strConnection = "Server=mySQLServerName\\myInstanceName;Database=dbSpies;User Id=myUsername;Password=myPassword;";
+
             string strCodeName = req.Query["CodeName"];
             string strAgency = req.Query["Agency"];
             log.LogInformation("HTTP trigger on getEmployee processed a request for: " + strCodeName);
